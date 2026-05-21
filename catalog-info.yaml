@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: prototype.interface.dwp-govuk-prototype-kit
-  title: dwp-govuk-prototype-kit
+  title: DWP-Govuk-Prototype-Kit
   description: |
     TODO: add description for dwp-govuk-prototype-kit.
 
