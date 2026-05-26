@@ -18,6 +18,8 @@
     "nunjucks": "^3.2.4"
   },
   "publishConfig": {
-    "registry": "https://gitlab.com/api/v4/projects/82407632/packages/npm/"
+    "registry": "https://gitlab.com/api/v4/projects/82407632/packages/npm/",
+    "govuk-prototype-kit": "13.20.1",
+    "uuid": "^14.0.0"
   }
 }
