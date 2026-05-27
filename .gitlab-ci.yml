@@ -10,8 +10,10 @@ publish:
   only:
     - tags
 
+
 update-prototypes:
   stage: update
+  image: node:20
   script:
     - npm ci
     - node scripts/update-prototypes.js
