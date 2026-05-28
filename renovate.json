@@ -1,13 +1,44 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "additional configuration only applicable to this repository",
   "extends": [
-    "local>dwp/secure-development/renovate-bot//shared-configs/datasources/docker",
-    "local>dwp/secure-development/renovate-bot//shared-configs/datasources/gitlab-tags",
-    "local>dwp/secure-development/renovate-bot//shared-configs/datasources/maven",
-    "local>dwp/secure-development/renovate-bot//shared-configs/datasources/npm",
-    "local>dwp/secure-development/renovate-bot//shared-configs/datasources/pypi",
-    "local>dwp/secure-development/renovate-bot//shared-configs/datasources/terraform",
-    "local>dwp/secure-development/renovate-bot//shared-configs/terraform-provider-registry-tofu-override"
-  ]
+    "config:recommended",
+    ":dependencyDashboard",
+    ":semanticCommits"
+  ],
+
+  "timezone": "Europe/London",
+  "schedule": ["before 1am"],
+
+  "dependencyDashboard": true,
+
+  "vulnerabilityAlerts": {
+    "enabled": true
+  },
+
+  "packageRules": [
+    {
+      "description": "Auto-merge safe fixes",
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "description": "Group minor updates",
+      "matchUpdateTypes": ["minor"],
+      "groupName": "minor updates"
+    },
+    {
+      "description": "Major updates separately",
+      "matchUpdateTypes": ["major"],
+      "groupName": "major updates"
+    }
+  ],
+
+"hostRules": [
+  {
+    "hostType": "npm",
+    "matchHost": "gitlab.com",
+    "token": "${RENOVATE_TOKEN}"
+  }
+]
+
 }
