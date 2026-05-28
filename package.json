@@ -8,12 +8,12 @@
     "start": "govuk-prototype-kit start"
   },
   "dependencies": {
-    "@dwp/dwp-frontend": "4.0.4",
+    "@dwp/dwp-frontend": "4.1.0",
     "@govuk-prototype-kit/common-templates": "3.0.0",
     "@ministryofjustice/frontend": "^9.0.0",
     "axios": "^1.16.1",
     "govuk-frontend": "6.1.0",
-    "hmrc-frontend": "^7.15.0",
+    "hmrc-frontend": "^7.16.0",
     "jquery": "^4.0.0",
     "nunjucks": "^3.2.4"
   },
