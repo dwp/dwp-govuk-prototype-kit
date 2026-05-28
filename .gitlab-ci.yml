@@ -6,7 +6,7 @@ variables:
   NODE_IMAGE: node:20
 
 ############################
-# ✅ Renovate job
+#Renovate job
 ############################
 renovate:
   stage: renovate
@@ -24,18 +24,17 @@ renovate:
     - if: $CI_PIPELINE_SOURCE == "schedule"
 
 ############################
-# ✅ Publish job
+# Publish job
 ############################
 publish:
   stage: publish
   image: $NODE_IMAGE
 
-
-rules:
-  - if: $CI_COMMIT_BRANCH == "main"
-    changes:
-      - package.json
-      - package-lock.json
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      changes:
+        - package.json
+        - package-lock.json
 
   before_script:
     - npm ci
@@ -45,8 +44,8 @@ rules:
     - echo "//gitlab.com/api/v4/projects/$CI_PROJECT_ID/packages/npm/:_authToken=${CI_JOB_TOKEN}" >> .npmrc
 
   script:
-    # ✅ Auto bump version (patch by default)
+    # Auto bump version (patch by default)
     - npm version patch --no-git-tag-version
 
-    # ✅ Publish package
+    # Publish package
     - npm publish --registry https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/packages/npm/
