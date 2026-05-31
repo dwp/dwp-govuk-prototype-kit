@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.com/dwp/user-centred-design/templates/dwp-govuk-prototype-kit.git
+git remote add origin https://gitlab.com/dwp/user-centred-design/templates/packages/dwp-govuk-prototype-kit.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-* [Set up project integrations](https://gitlab.com/dwp/user-centred-design/templates/dwp-govuk-prototype-kit/-/settings/integrations)
+* [Set up project integrations](https://gitlab.com/dwp/user-centred-design/templates/packages/dwp-govuk-prototype-kit/-/settings/integrations)
 
 ## Collaborate with your team
 
