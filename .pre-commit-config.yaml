@@ -132,7 +132,7 @@ repos:
           - --markdown-linebreak-ext=md
 
   - repo: https://gitlab.com/adam-moss/pre-commit-trailer
-    rev: v1.1.0
+    rev: v1.2.0
     hooks:
       - id: add-pre-commit-config-trailer
       - id: add-pre-commit-user-skipped-trailer
